@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:laijiahao="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal" >
+
+        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+            android:id="@+id/id_indicator_one"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            laijiahao:icon1="@drawable/ic_menu_start_conversation"
+            laijiahao:text1="@string/app_name"
+            laijiahao:text_size1="12sp"
+            laijiahao:color1="#ff45c01a" />
+
+        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+            android:id="@+id/id_indicator_two"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            laijiahao:icon1="@drawable/ic_menu_friendslist"
+            laijiahao:text1="@string/tab_contact"
+            laijiahao:text_size1="12sp"
+            laijiahao:color1="#ff45c01a" />
+
+        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+            android:id="@+id/id_indicator_three"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            laijiahao:icon1="@drawable/ic_menu_emoticons"
+            laijiahao:text1="@string/tab_found"
+            laijiahao:text_size1="12sp"
+            laijiahao:color1="#ff45c01a" />
+
+        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+            android:id="@+id/id_indicator_four"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            laijiahao:icon1="@drawable/ic_menu_allfriends"
+            laijiahao:text1="@string/tab_me"
+            laijiahao:text_size1="12sp"
+            laijiahao:color1="#ff45c01a" />
+    </LinearLayout>
+
+</LinearLayout>
