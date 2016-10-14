@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.example.laijiahao.mychat.R;
 import com.example.laijiahao.mychat.constant.Constant;
 import com.example.laijiahao.mychat.receiver.MyAdminDeviceReceiver;
-import com.example.laijiahao.mychat.ui.ChatDemoActivity;
+import com.example.laijiahao.mychat.ui.SettingActivity;
 import com.example.laijiahao.mychat.ui.CompassActivity;
 import com.example.laijiahao.mychat.ui.PreWalletActivity;
 import com.example.laijiahao.mychat.ui.ProfileActivity;
@@ -102,7 +102,7 @@ public class MeFragment extends Fragment implements View.OnClickListener{
 				startActivity(intent1);
 				break;
 			case R.id.re_setting:
-				Intent intent2 = new Intent(getActivity(),ChatDemoActivity.class);
+				Intent intent2 = new Intent(getActivity(),SettingActivity.class);
 				startActivity(intent2);
 				break;
 		}

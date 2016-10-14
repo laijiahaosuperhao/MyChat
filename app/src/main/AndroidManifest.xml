@@ -46,12 +46,14 @@
             android:theme="@style/MainTheme" />
         <activity
             android:name=".ui.LoginActivity"
+            android:launchMode="singleTask"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".ui.RegisterActivity"
             android:theme="@style/MainTheme" />
         <activity android:name=".ui.MainActivity"
             android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
             />
         <activity
             android:name=".ui.CompassActivity"
@@ -86,7 +88,7 @@
             android:theme="@style/MainTheme"
             />
         <activity
-            android:name=".ui.ChatDemoActivity"
+            android:name=".ui.SettingActivity"
             android:theme="@style/MainTheme"
             />
         <activity
@@ -96,7 +98,17 @@
         <activity
             android:name=".ui.MyRecorderActivity"
             android:theme="@style/MainTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             />
+        <activity
+            android:name=".ui.FriendCircleActivity"
+            android:theme="@style/MainTheme"
+            />
+
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
 
         <!-- 设置环信应用的AppKey -->
         <meta-data

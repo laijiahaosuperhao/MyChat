@@ -13,11 +13,6 @@
         android:label="Tests for com.hyphenate.easeui.test"
         android:targetPackage="com.hyphenate.easeui.test" />
 
-    <activity
-        android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/horizontal_slide" />
-
     <application>
         <uses-library android:name="android.test.runner" />
     </application>

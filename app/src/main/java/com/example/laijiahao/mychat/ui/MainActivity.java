@@ -138,7 +138,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
     private void initDatas() {
 
-   //     ChatDemoActivity chatFragment = new ChatDemoActivity();
+   //     SettingActivity chatFragment = new SettingActivity();
         conversationListFragment = new EaseConversationListFragment();
         contactFragment = new ContactFragment();
         //	contactListFragment.setContactsMap(getContacts());

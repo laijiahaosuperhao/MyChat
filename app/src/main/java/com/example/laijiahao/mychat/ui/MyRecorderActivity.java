@@ -1,21 +1,25 @@
 package com.example.laijiahao.mychat.ui;
 
+import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.example.laijiahao.mychat.R;
+import com.example.laijiahao.mychat.adapter.RecorderAdapter;
 import com.example.laijiahao.mychat.runtimepermissions.PermissionsManager;
 import com.example.laijiahao.mychat.runtimepermissions.PermissionsResultAction;
 import com.example.laijiahao.mychat.utils.MediaManager;
-import com.example.laijiahao.mychat.adapter.RecorderAdapter;
 import com.example.laijiahao.mychat.widget.AudioRecorderButton;
 
 import java.util.ArrayList;
@@ -23,7 +27,7 @@ import java.util.List;
 
 import static com.example.laijiahao.mychat.ui.MyRecorderActivity.Recorder.TYPE_RECEIVED;
 
-public class MyRecorderActivity extends BaseActivity implements View.OnClickListener {
+public class MyRecorderActivity extends BaseActivity implements View.OnClickListener ,View.OnLayoutChangeListener {
 
     private ListView mListView;
     private ArrayAdapter<Recorder> mAdapter;
@@ -37,6 +41,9 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
     private Button btn_set_mode_voice;
     private EditText input_text;
     private Button send;
+    private LinearLayout ll_input;
+    private int screenHeight;
+    private int keyHeight;
 
 
     @Override
@@ -49,6 +56,7 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
         send = (Button) findViewById(R.id.send);
         btn_set_mode_keyboard = (Button) findViewById(R.id.btn_set_mode_keyboard);
         btn_set_mode_voice = (Button) findViewById(R.id.btn_set_mode_voice);
+        ll_input = (LinearLayout) findViewById(R.id.ll_input);
         btn_set_mode_keyboard.setOnClickListener(this);
         btn_set_mode_voice.setOnClickListener(this);
         send.setOnClickListener(this);
@@ -101,7 +109,27 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
 
         });
 
+        input_text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+
+//     mListView.smoothScrollToPosition(mAdapter.getCount());
+                }
+
+
+            }
+        });
+
+        //获取屏幕高度
+        screenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
+        //阀值设置为屏幕高度的1/3
+        keyHeight = screenHeight /3;
+        ll_input.addOnLayoutChangeListener(this);
+
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -113,9 +141,6 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
                 btn_set_mode_voice.setVisibility(View.VISIBLE);
                 input_text.setVisibility(View.VISIBLE);
                 send.setVisibility(View.VISIBLE);
-                if (mAudioRecorderButton.getVisibility()== View.VISIBLE) {
-                    // TODO hide keyboard
-                }
                 break;
             case R.id.btn_set_mode_voice:
                 btn_set_mode_keyboard.setVisibility(View.VISIBLE);
@@ -123,6 +148,15 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
                 btn_set_mode_voice.setVisibility(View.GONE);
                 input_text.setVisibility(View.GONE);
                 send.setVisibility(View.GONE);
+                if (mAudioRecorderButton.getVisibility() == View.VISIBLE) {
+                    /** hide keyboard*/
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    boolean isOpen = imm.isActive();//isOpen若返回true，则表示输入法打开
+                    Log.d("isOpen", String.valueOf(isOpen));
+                    if (isOpen) {
+                        imm.hideSoftInputFromWindow(input_text.getWindowToken(), 0); //强制隐藏键盘
+                    }
+                }
                 break;
             case R.id.send:
                 String content = input_text.getText().toString();
@@ -134,6 +168,18 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
                     input_text.setText(""); //清空输入框的内容
                 }
                 break;
+        }
+    }
+
+    @Override
+    public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+        if(oldBottom != 0 && bottom != 0 &&(oldBottom - bottom > keyHeight)){
+            mListView.setSelection(mDatas.size()-1);
+
+
+        }else if(oldBottom != 0 && bottom != 0 &&(bottom - oldBottom > keyHeight)){
+
+
         }
     }
 

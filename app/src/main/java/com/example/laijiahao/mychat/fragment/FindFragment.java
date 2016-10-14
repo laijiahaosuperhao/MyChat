@@ -9,21 +9,25 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.example.laijiahao.mychat.R;
+import com.example.laijiahao.mychat.ui.FriendCircleActivity;
 import com.example.laijiahao.mychat.ui.YaoyiyaoActivity;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 
 public class FindFragment extends Fragment implements View.OnClickListener{
 	private RelativeLayout yaoyiyao;
 	private RelativeLayout saoyisao;
-	
+	private RelativeLayout re_friends;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view=inflater.inflate(R.layout.fragment_find, container,false);
 		yaoyiyao = (RelativeLayout) view.findViewById(R.id.re_yaoyiyao);
 		saoyisao = (RelativeLayout) view.findViewById(R.id.re_qrcode);
+		re_friends = (RelativeLayout) view.findViewById(R.id.re_friends);
 		yaoyiyao.setOnClickListener(this);
 		saoyisao.setOnClickListener(this);
+		re_friends.setOnClickListener(this);
 		return view;
 	}
 
@@ -38,6 +42,10 @@ public class FindFragment extends Fragment implements View.OnClickListener{
 			case R.id.re_yaoyiyao:
 				Intent intent = new Intent(getActivity(),YaoyiyaoActivity.class);
 				startActivity(intent);
+				break;
+			case R.id.re_friends:
+				Intent friendCircle = new Intent(getActivity(),FriendCircleActivity.class);
+				startActivity(friendCircle);
 				break;
 
 		}

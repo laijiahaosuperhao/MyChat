@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_40edbfe656c46af83982fc1b5694130ffcc03fac.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -26,7 +35,7 @@
         optimize="true"
         revision="24.0.2"
         sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_b8226fa6bf814042016925e394cf036e73da5532.jar" />
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_b8226fa6bf814042016925e394cf036e73da5532.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,30 +57,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_395f952dd24224e87aa9ddb3d77c108b15a83002.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/glide-3.6.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="015a639bd9933f4f812be8bede14f14bd1bdea8b">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/glide-3.6.1_7afa1ad87089ce7ec3969c06086280eeb314bebf.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
         <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_3ac567da45ec33724ff943c6e80c71345f9006aa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_87eb3e6f5edcc182e310b9a35c7e72c58b1977a5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,210 +102,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="36f2a645bb78447e343abafc3a41b0f349cf1952">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/MyChat-easeUI_CN-unspecified_814c0952c5efafb714a232fdd5745c99d4e0b875.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/HwPush_SDK_V2705_nomap.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="d68d22f9e4842e7ea73a667df0808babf6402704">
         <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/HwPush_SDK_V2705_nomap_f0e0ea1694ef4ad692728231eb93e9dec334b11b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_12f40e8127d3d24bada33b8bba8578b43e4e94f1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/libzxing/unspecified/jars/libs/zxing.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/zxing_e90e93e545ee831229935265a8931dee3a91ee4b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/libzxing/unspecified/jars/libs/zxing.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/zxing_5a2edc8555d5ef60f015849780129148fd63d9f6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_291584c15263bb803c6b9a675ae622f167a2db94.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_4af009711706256f6adb466729a53001f016a791.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/libzxing/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fe0f2bb5493b0dad7e70fb84c61cb613e5f06d56">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/MyChat-libzxing-unspecified_9384cdd52bbe36261a6954aaab9883daa1e3d040.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_a650c859f7ad0b4ce337ab4e965011d3bdb2578b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_ae2c668506bec57d4233320535b382a9c8f1e260.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_c7bfa4e7a88de4930635e39f414e40ad7c97b861.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/HwPush_SDK_V2705_nomap.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d68d22f9e4842e7ea73a667df0808babf6402704">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/HwPush_SDK_V2705_nomap_8498080e86274fcedbf7c63029fa68a4a588c5d9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_c2577cb95530e463af06e8d3da9b826c94be6f1c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_40edbfe656c46af83982fc1b5694130ffcc03fac.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_4ba5155f61f3e0af22a9f1bd14979b15a3eef077.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_77c021c2ab70488bcad0d3aa3a3e8515fac0edec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/hyphenatechat_3.1.5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8864d589ca9015e6c086c1e0f85668139ab03cc5">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/hyphenatechat_3.1.5_054e77c3882699c3ff41cbbd39338b3ec9ec3378.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/MiPush_SDK_Client_2_2_19.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6231c3f3409df7b3172bc5e89f68fbc6beec733e">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/MiPush_SDK_Client_2_2_19_6fc8dfecc37cc2b1a6c9bef197b6a62ec7f1c51e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/google-play-services.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="dc8ba9e80c63fa62ffe4130ae3487a2ec25912ef">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/google-play-services_09785c44e4c25ec8b4be48f0dfa9d92ae24734ed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_87eb3e6f5edcc182e310b9a35c7e72c58b1977a5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_26ad2c9a49e8d8d9aa6f842d05412ae57f1b2761.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/BaiduLBS_Android.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f1d3eb83228ace176170b6c5c9fa3b792011581b">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/BaiduLBS_Android_c4019534481730c2df96192b5eeed5f36b2c6f66.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_de3356c0244ad15e1785fc8ec9266b9765da766e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -318,21 +120,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_5aa2bfa8f12124074535810c74bf0257f47fbb1d.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_47afdcab75af5e713db2ca2d0f273dbafb41890f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/libzxing/unspecified/jars/libs/zxing.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="657431ffc6f0c763c22579b392e0bdfab26fc817">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/zxing_e90e93e545ee831229935265a8931dee3a91ee4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/laijiahao/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_d38d9ac335038e3d926cd9d377a9512dd0450393.jar" />
     </item>
     <item
         is-multidex="false"
@@ -363,15 +174,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/libzxing/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fe0f2bb5493b0dad7e70fb84c61cb613e5f06d56">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/MyChat-libzxing-unspecified_cb84e404301a45d3cebcd42ba601fb76c019ae8a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -399,21 +201,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/org.apache.http.legacy.jar"
+        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/libzxing/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="49bc2d83ccb0cfe1dbc853e3ba80db0f950ed96d">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/org.apache.http.legacy_4c18eff22f133580e464b4c79c29e37cae109724.jar" />
+        sha1="fe0f2bb5493b0dad7e70fb84c61cb613e5f06d56">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/MyChat-libzxing-unspecified_9384cdd52bbe36261a6954aaab9883daa1e3d040.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_a2c3decd56e5d19cd8b3d30a8a73ce1fc57d7acc.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_ae2c668506bec57d4233320535b382a9c8f1e260.jar" />
     </item>
     <item
         is-multidex="false"
@@ -423,15 +225,6 @@
         revision="24.0.2"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_aae7d5fd6c8423ad5a70bcb5590629238ed2541c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/laijiahao/AndroidStudioProjects/project/MyChat/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_f85673d03772f7ff6d57c94137328a8a3c8aac1b.jar" />
     </item>
     <item
         is-multidex="false"
