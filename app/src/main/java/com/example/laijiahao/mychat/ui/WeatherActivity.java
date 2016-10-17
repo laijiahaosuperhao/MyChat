@@ -1,6 +1,5 @@
 package com.example.laijiahao.mychat.ui;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,7 +20,7 @@ import com.example.laijiahao.mychat.utils.Utility;
  * Created by laijiahao on 16/10/3.
  */
 
-public class WeatherActivity extends Activity implements View.OnClickListener {
+public class WeatherActivity extends BaseActivity implements View.OnClickListener {
     private LinearLayout weatherInfoLayout;
     /**
      * 用于显示城市名
