@@ -5,6 +5,8 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
+
+
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -98,6 +100,11 @@
                 android:textColorHint="#DDDDDD"
                 android:textSize="16sp" />
 
+            <com.wayww.edittextfirework.FireworkView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fire_work_et_usertel"/>
+
             <TextView
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
@@ -125,6 +132,10 @@
                 android:singleLine="true"
                 android:textColorHint="#DDDDDD"
                 android:textSize="16sp" />
+            <com.wayww.edittextfirework.FireworkView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/fire_work_et_password"/>
 
             <TextView
                 android:id="@+id/tv_password"
@@ -137,6 +148,7 @@
                 android:textColor="#353535"
                 android:textSize="16sp" />
         </RelativeLayout>
+
 
         <Button
             android:id="@+id/btn_login"

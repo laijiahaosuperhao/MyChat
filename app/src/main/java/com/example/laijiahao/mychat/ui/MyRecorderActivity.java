@@ -63,6 +63,7 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
 
         mListView = (ListView) findViewById(R.id.id_listview);
         mAudioRecorderButton = (AudioRecorderButton) findViewById(R.id.id_record_button);
+        //Activity拿到录音结束后的callback就可以更新它的listView
         mAudioRecorderButton.setAudioFinishRecorderListener(new AudioRecorderButton.AudioFinishRecorderListener() {
             @Override
             public void onFinish(float seconds, String filePath, String content, int type) {
@@ -125,6 +126,8 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
         screenHeight = this.getWindowManager().getDefaultDisplay().getHeight();
         //阀值设置为屏幕高度的1/3
         keyHeight = screenHeight /3;
+
+        //为Activity的最外面的Layout设置一个OnLayoutChangeListener监听器
         ll_input.addOnLayoutChangeListener(this);
 
     }
@@ -164,7 +167,7 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
                     Recorder recorder = new Recorder(0, null, content, TYPE_RECEIVED);
                     mDatas.add(recorder);
                     mAdapter.notifyDataSetChanged();
-                    mListView.setSelection(mDatas.size() - 1);
+                    mListView.setSelection(mDatas.size() - 1); //将显示的数据定位到最后一行
                     input_text.setText(""); //清空输入框的内容
                 }
                 break;
@@ -173,7 +176,9 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
 
     @Override
     public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+        //现在认为只要控件将Activity向上推的高度超过了1/3屏幕高，就认为软键盘弹起
         if(oldBottom != 0 && bottom != 0 &&(oldBottom - bottom > keyHeight)){
+            //将显示的数据定位到最后一行
             mListView.setSelection(mDatas.size()-1);
 
 
@@ -184,6 +189,7 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
     }
 
 
+    //定义消息的实体类  根据消息的类型来决定显示和隐藏哪种消息
     public class Recorder {
         public float time;
         String filePath;

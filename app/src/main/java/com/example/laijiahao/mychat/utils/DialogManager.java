@@ -98,9 +98,6 @@ public class DialogManager {
     //更新对话框上的音量的标志
     public void updateVoiceLevel(int level) {
         if (mDialog != null && mDialog.isShowing()) {
-//            mIcon.setVisibility(View.VISIBLE);
-//            mVoice.setVisibility(View.VISIBLE);
-//            mLable.setVisibility(View.VISIBLE);
 
             //通过方法名找到资源,通过level整型找到resId的值
             int resId = mContext.getResources().getIdentifier("v" + level,

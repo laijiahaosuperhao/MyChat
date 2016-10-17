@@ -21,7 +21,7 @@ import static com.example.laijiahao.mychat.ui.MyRecorderActivity.Recorder.TYPE_S
 
 public class AudioRecorderButton extends Button implements AudioManager.AudioStateListener {
 
-    private static final int DISTANCE_Y_CANCEL =50;
+    private static final int DISTANCE_Y_CANCEL =50; //单位为px
     private static final int STATE_NORMAL = 1 ;  //默认状态
     private static final int STATE_RECORDING = 2 ;  //录音状态
     private static final int STATE_WANT_TO_CANCEL = 3 ;  //取消状态
@@ -213,11 +213,14 @@ public class AudioRecorderButton extends Button implements AudioManager.AudioSta
         return false;
     }
 
+    //改变Button显示文本和背景色 以及dialog的显示
+    //dialog的状态和Button基本是一致的，除了tooshort
     private void changeState(int state) {
         if(mCurState != state){
             mCurState = state;
             switch (state) {
                 case STATE_NORMAL:
+                    //在up时dismiss掉dialog
                     setBackgroundResource(R.drawable.btn_recorder_nomal);
                     setText(R.string.str_recorder_normal);
                     break;

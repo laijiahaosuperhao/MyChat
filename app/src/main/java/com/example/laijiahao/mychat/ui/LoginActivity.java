@@ -19,6 +19,7 @@ import com.example.laijiahao.mychat.utils.MyConnectionListener;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
+import com.wayww.edittextfirework.FireworkView;
 
 
 /**
@@ -33,6 +34,8 @@ public class LoginActivity extends BaseActivity {
     private Button btn_login;
     private Button btn_qtlogin;
     private Button tv_wenti;
+    private FireworkView mFireworkView_et_usertel;
+    private FireworkView mFireworkView_et_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,11 @@ public class LoginActivity extends BaseActivity {
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_qtlogin = (Button) findViewById(R.id.btn_qtlogin);
         tv_wenti = (Button) findViewById(R.id.tv_wenti);
+
+        mFireworkView_et_usertel = (FireworkView) findViewById(R.id.fire_work_et_usertel);
+        mFireworkView_et_password = (FireworkView) findViewById(R.id.fire_work_et_password);
+        mFireworkView_et_usertel.bindEditText(et_usertel);
+        mFireworkView_et_password.bindEditText(et_password);
         // 监听多个输入框
         TextChange textChange = new TextChange();
         et_usertel.addTextChangedListener(textChange);
@@ -62,7 +70,9 @@ public class LoginActivity extends BaseActivity {
         et_usertel.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                et_password.setText(null);
+             //   mFireworkView_et_password.setEnabled(false);
+             //   et_password.setText(null);
+
             }
 
             @Override

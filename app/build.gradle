@@ -34,4 +34,5 @@ dependencies {
     compile project(':easeUI_CN')
     compile project(':libzxing')
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile project(':edittextfirework')
 }

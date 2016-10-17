@@ -104,6 +104,14 @@
             android:name=".ui.FriendCircleActivity"
             android:theme="@style/MainTheme"
             />
+        <activity
+            android:name=".ui.ChooseAreaActivity"
+            android:theme="@style/MainTheme"
+            />
+        <activity
+            android:name=".ui.WeatherActivity"
+            android:theme="@style/MainTheme"
+            />
 
         <activity
             android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
@@ -149,6 +157,9 @@
                 <action android:name="com.example.broadcastbestpractice.FORCE_OFFLINE"/>
             </intent-filter>
         </receiver>
+
+        <service android:name=".service.AutoUpdateService"> </service>
+        <receiver android:name=".receiver.AutoUpdateReceiver"> </receiver>
     </application>
 
 </manifest>

@@ -70,6 +70,7 @@ public class RecorderAdapter extends ArrayAdapter<MyRecorderActivity.Recorder> {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        //根据消息的类型来决定显示和隐藏哪种消息
         if (recorder.getType() == MyRecorderActivity.Recorder.TYPE_RECEIVED) {
             holder.leftLayout.setVisibility(View.VISIBLE);
             holder.rightLayout.setVisibility(View.GONE);

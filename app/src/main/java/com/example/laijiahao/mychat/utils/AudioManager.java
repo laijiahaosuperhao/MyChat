@@ -14,7 +14,7 @@ public class AudioManager {
 
     private MediaRecorder mMediaRecorder;
     private String mDir; //文件夹名称,放置录制的音频
-    private String mCurrentFilePath; //把录音保存到文件夹以后,需要把文件夹的path回传给button,然后Button回传给activity
+    private String mCurrentFilePath; //把录音保存到文件夹以后,需要把文件的path回传给button,然后Button回传给activity
 
     //这个类使用单例
     private static AudioManager mInstance;
@@ -71,7 +71,7 @@ public class AudioManager {
 
             String fileName = generateFileName();
 
-            File file = new File(dir, fileName); //根据filename创建一个file,文件的路径是dir,名称是fileName
+            File file = new File(dir, fileName); //根据filename创建一个file,文件的父路径是dir,名称是fileName
 
             mCurrentFilePath = file.getAbsolutePath();
             mMediaRecorder = new MediaRecorder();
@@ -81,13 +81,14 @@ public class AudioManager {
             mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             //设置音频格式
             mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
-            //设置音频的编码为amr
+            //设置音频的编码为amr ,然后到达DataSourceConfigured状态，之后就可以prepare
             mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
             mMediaRecorder.prepare();
-            mMediaRecorder.start();
+            mMediaRecorder.start(); //到达Recording状态,开始录制
             //准备结束
-            isPrepared = true;
+            isPrepared = true; //标志着MediaRecorder已经start(),Recording状态之后才会去stop()和release()
 
+            //准备好之后显示录音的dialog
             if(mListener!=null){
                 mListener.wellPrepared();
             }

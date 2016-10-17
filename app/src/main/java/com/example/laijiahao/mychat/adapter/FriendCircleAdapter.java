@@ -49,6 +49,7 @@ public class FriendCircleAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         List<Image> itemList = datalist.get(position);
+        getItem(position);
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.itemt, parent, false);
             viewHolder = new ViewHolder();

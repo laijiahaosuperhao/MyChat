@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.laijiahao.mychat.R;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
+import com.wayww.edittextfirework.FireworkView;
 
 /**
  * Created by laijiahao on 16/9/24.
@@ -27,6 +28,7 @@ public class AddContactActivity extends BaseActivity{
     private TextView nameText;
     private ProgressDialog progressDialog;
     private RelativeLayout title;
+    private FireworkView mFireworkView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class AddContactActivity extends BaseActivity{
         searchedUserLayout = (RelativeLayout) findViewById(R.id.ll_user);
         nameText = (TextView) findViewById(R.id.name);
         title = (RelativeLayout) findViewById(R.id.title);
+        mFireworkView = (FireworkView) findViewById(R.id.fire_work);
+        mFireworkView.bindEditText(editText);
         Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
         if(data!=null){

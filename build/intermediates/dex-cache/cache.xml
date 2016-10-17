@@ -102,6 +102,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/edittextfirework/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c68476258828f262d14e42a60da0b5315f569d2f">
+        <dex dex="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/pre-dexed/debug/MyChat-edittextfirework-unspecified_e278c007238f4be555d7e0330e509f5fee9fc88f.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/laijiahao/AndroidStudioProjects/MyChat/app/build/intermediates/exploded-aar/MyChat/easeUI_CN/unspecified/jars/libs/HwPush_SDK_V2705_nomap.jar"
         jumboMode="false"
         optimize="true"

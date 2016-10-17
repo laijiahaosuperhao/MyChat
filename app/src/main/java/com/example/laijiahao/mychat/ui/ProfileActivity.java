@@ -42,10 +42,9 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     private ImageView iv_avatar;
     private Uri imageUri;
     private Bitmap bitmap;
-    //头像，昵称，微信号是否发生变化
     private String imagePath;
 
-    private boolean i ;
+    private boolean mode;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,9 +53,9 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
         re_avatar = (RelativeLayout)this.findViewById(R.id.re_avatar);
         iv_avatar = (ImageView) this.findViewById(R.id.iv_avatar);
         re_avatar.setOnClickListener(this);
-        i = getSharedPreferences(Constant.USERINFO_FILENAME,
-                Context.MODE_PRIVATE).getBoolean("i", false);
-        if(!i){
+        mode = getSharedPreferences(Constant.USERINFO_FILENAME,
+                Context.MODE_PRIVATE).getBoolean("mode", false);
+        if(!mode){
             String imagePathOK = getSharedPreferences(Constant.USERINFO_FILENAME,
                     Context.MODE_PRIVATE).getString("imagePath", "laijiahaosuperhao");
             displayImage(imagePathOK);
@@ -95,7 +94,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
             public void onClick(int position) {
                 switch (position) {
                     case 0:
-                        i=true;
+                        mode =true;
                         //创建File对象,用于存储拍照后的图片
                         File outputImage = new File(Environment.getExternalStorageDirectory(),"output_image.jpg");
                         try{
@@ -112,7 +111,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                         startActivityForResult(intent,TAKE_PHOTO);//启动相机程序
                         break;
                     case 1:
-                        i=false;
+                        mode =false;
                         Intent intent1 = new Intent("android.intent.action.GET_CONTENT");
                         intent1.setType("image/*");
                         startActivityForResult(intent1,CHOOSE_PHOTO); //打开相册
@@ -215,14 +214,14 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(i){
+        if(mode){
             getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putString("imageUri", String.valueOf(imageUri)).commit();
 
         }else{
             getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putString("imagePath", imagePath).commit();
 
         }
-        getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putBoolean("i", i).commit();
+        getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putBoolean("mode", mode).commit();
 
     }
 

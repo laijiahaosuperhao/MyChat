@@ -56,12 +56,18 @@
                     android:src="@drawable/icon_camera_moments" />
         </RelativeLayout>
 
-        <ListView
-            android:id="@+id/lv_main"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:listSelector="@android:color/transparent"
-            />
+        <com.example.laijiahao.mychat.widget.RefreshableView
+            android:id="@+id/refreshable_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <ListView
+                    android:id="@+id/lv_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:listSelector="@android:color/transparent"
+                    />
+        </com.example.laijiahao.mychat.widget.RefreshableView>
 
 </LinearLayout>
 

@@ -68,6 +68,7 @@ public class CompassActivity extends BaseActivity{
             SensorManager.getOrientation(R,values);
             //value[0]表示手机围绕z轴旋转的弧度
             Log.d("CompassActivity","value[0] is" + Math.toDegrees(values[0]));
+            //将计算出的旋转角度取反，用于旋转指南针背景图
             float rotateDegree = -(float)Math.toDegrees(values[0]);
             if(Math.abs(rotateDegree - lastRotateDegree)>1){
                 RotateAnimation animation = new RotateAnimation
