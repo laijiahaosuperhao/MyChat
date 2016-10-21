@@ -28,6 +28,7 @@ public class AddContactActivity extends BaseActivity{
     private TextView nameText;
     private ProgressDialog progressDialog;
     private RelativeLayout title;
+    private RelativeLayout rl_note;
     private FireworkView mFireworkView;
 
     @Override
@@ -35,6 +36,7 @@ public class AddContactActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_contact);
         editText = (EditText) findViewById(R.id.edit_note);
+        rl_note = (RelativeLayout) findViewById(R.id.rl_note);
         searchBtn = (Button) findViewById(R.id.search);
         searchedUserLayout = (RelativeLayout) findViewById(R.id.ll_user);
         nameText = (TextView) findViewById(R.id.name);
@@ -44,7 +46,7 @@ public class AddContactActivity extends BaseActivity{
         Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
         if(data!=null){
-            editText.setVisibility(View.GONE);
+            rl_note.setVisibility(View.GONE);
             title.setVisibility(View.GONE);
             searchedUserLayout.setVisibility(View.VISIBLE);
             nameText.setText(data);
@@ -83,6 +85,7 @@ public class AddContactActivity extends BaseActivity{
      * @param view
      */
     public void addContact(View view){
+        //不能添加自己
         if(EMClient.getInstance().getCurrentUser().equals(nameText.getText().toString())){
             new EaseAlertDialog(this, R.string.not_add_myself).show();
             return;

@@ -12,12 +12,12 @@
         "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_chat_message_list.xml"
     },
     {
-        "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_row_sent_picture.xml",
-        "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_row_sent_picture.xml"
-    },
-    {
         "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_widget_voice_recorder.xml",
         "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_widget_voice_recorder.xml"
+    },
+    {
+        "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_row_sent_picture.xml",
+        "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_row_sent_picture.xml"
     },
     {
         "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_row_contact.xml",
@@ -52,12 +52,12 @@
         "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_row_received_voice.xml"
     },
     {
-        "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_widget_title_bar.xml",
-        "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_widget_title_bar.xml"
-    },
-    {
         "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_widget_emojicon.xml",
         "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_widget_emojicon.xml"
+    },
+    {
+        "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_widget_title_bar.xml",
+        "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/layout/ease_widget_title_bar.xml"
     },
     {
         "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/debug/layout/ease_fragment_chat.xml",

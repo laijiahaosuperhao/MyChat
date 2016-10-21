@@ -213,11 +213,11 @@ public class RegisterActivity extends BaseActivity {
         public void onTextChanged(CharSequence cs, int start, int before,
                                   int count) {
 
-            boolean Sign1 = et_usernick.getText().length() > 0;
+    //        boolean Sign1 = et_usernick.getText().length() > 0;
             boolean Sign2 = et_usertel.getText().length() > 0;
             boolean Sign3 = et_password.getText().length() > 0;
 
-            if (Sign1 & Sign2 & Sign3) {
+            if (Sign2 & Sign3) {
 
                 btn_register.setEnabled(true);
             }

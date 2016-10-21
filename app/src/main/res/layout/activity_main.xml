@@ -19,7 +19,7 @@
         android:background="@drawable/tab_bg"
         android:orientation="horizontal" >
 
-        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+        <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_one"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -30,7 +30,7 @@
             laijiahao:text_size1="12sp"
             laijiahao:color1="#ff45c01a" />
 
-        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+        <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_two"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -41,7 +41,7 @@
             laijiahao:text_size1="12sp"
             laijiahao:color1="#ff45c01a" />
 
-        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+        <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_three"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -52,7 +52,7 @@
             laijiahao:text_size1="12sp"
             laijiahao:color1="#ff45c01a" />
 
-        <com.example.laijiahao.mychat.utils.ChangeColorIconWithText
+        <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_four"
             android:layout_width="0dp"
             android:layout_height="fill_parent"

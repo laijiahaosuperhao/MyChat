@@ -22,7 +22,7 @@ import com.example.laijiahao.mychat.fragment.MeFragment;
 import com.example.laijiahao.mychat.runtimepermissions.PermissionsManager;
 import com.example.laijiahao.mychat.runtimepermissions.PermissionsResultAction;
 import com.example.laijiahao.mychat.utils.ActivityCollector;
-import com.example.laijiahao.mychat.utils.ChangeColorIconWithText;
+import com.example.laijiahao.mychat.widget.ChangeColorIconWithText;
 import com.example.laijiahao.mychat.utils.MyConnectionListener;
 import com.hyphenate.EMContactListener;
 import com.hyphenate.EMMessageListener;
@@ -81,6 +81,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
         setContentView(R.layout.activity_main);
         setOverflowButtonAlways();
+        //去除显示的图标
         getActionBar().setDisplayShowHomeEnabled(false);
 
         initView();
@@ -328,9 +329,13 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 
     }
 
+    //反射，动态把ViewConfiguration里面的sHasPermanentMenuKey设置为false，
+    // 让它能出现的OverflowButton一直出现，并且点击menu时，改变菜单显示的位置
     private void setOverflowButtonAlways() {
         try {
+            //含有很多配置信息
             ViewConfiguration config = ViewConfiguration.get(this);
+            //显示overflowbutton的Field
             Field menuKey = ViewConfiguration.class
                     .getDeclaredField("sHasPermanentMenuKey");
             menuKey.setAccessible(true);
@@ -346,12 +351,16 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
     @Override
     public boolean onMenuOpened(int featureId, Menu menu) {
 
+        //根据id判断是否是actionbar和判断menu是否是空的
         if (featureId == Window.FEATURE_ACTION_BAR && menu != null) {
+            //menu是一个接口，实际上的类是MenuBuilder
             if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
                 try {
+                    //找到MenuBuilder的setOptionalIconsVisible方法
                     Method m = menu.getClass().getDeclaredMethod(
                             "setOptionalIconsVisible", Boolean.TYPE);
                     m.setAccessible(true);
+                    //通过反射，设置可调用，然后设置为true
                     m.invoke(menu, true);
                 } catch (Exception e) {
                     e.printStackTrace();

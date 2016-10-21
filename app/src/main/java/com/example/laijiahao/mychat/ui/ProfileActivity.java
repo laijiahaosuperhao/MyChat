@@ -33,7 +33,7 @@ import java.util.List;
  * Created by laijiahao on 16/9/23.
  */
 
-public class ProfileActivity extends BaseActivity implements View.OnClickListener{
+public class ProfileActivity extends BaseActivity implements View.OnClickListener {
 
     private static final int TAKE_PHOTO = 1;
     private static final int CROP_PHOTO = 2;
@@ -43,6 +43,7 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     private Uri imageUri;
     private Bitmap bitmap;
     private String imagePath;
+    private RelativeLayout re_qrcode;
 
     private boolean mode;
 
@@ -50,19 +51,21 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myinfo);
-        re_avatar = (RelativeLayout)this.findViewById(R.id.re_avatar);
+        re_avatar = (RelativeLayout) this.findViewById(R.id.re_avatar);
         iv_avatar = (ImageView) this.findViewById(R.id.iv_avatar);
+        re_qrcode = (RelativeLayout) this.findViewById(R.id.re_qrcode);
+        re_qrcode.setOnClickListener(this);
         re_avatar.setOnClickListener(this);
         mode = getSharedPreferences(Constant.USERINFO_FILENAME,
                 Context.MODE_PRIVATE).getBoolean("mode", false);
-        if(!mode){
+        if (!mode) {
             String imagePathOK = getSharedPreferences(Constant.USERINFO_FILENAME,
-                    Context.MODE_PRIVATE).getString("imagePath", "laijiahaosuperhao");
+                    Context.MODE_PRIVATE).getString("imagePath", "");
             displayImage(imagePathOK);
-            imagePath=imagePathOK;
-        }else{
+            imagePath = imagePathOK;
+        } else {
             imageUri = Uri.parse(getSharedPreferences(Constant.USERINFO_FILENAME,
-                    Context.MODE_PRIVATE).getString("imageUri", "laijiahaosuperhao"));
+                    Context.MODE_PRIVATE).getString("imageUri", ""));
             try {
                 bitmap = BitmapFactory.decodeStream
                         (getContentResolver().openInputStream(imageUri));
@@ -80,6 +83,10 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
             case R.id.re_avatar:
                 showPhotoDialog();
                 break;
+            case R.id.re_qrcode:
+                Intent qrcode = new Intent(ProfileActivity.this, QrcodeActivity.class);
+                startActivity(qrcode);
+                break;
         }
     }
 
@@ -94,27 +101,27 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
             public void onClick(int position) {
                 switch (position) {
                     case 0:
-                        mode =true;
+                        mode = true;
                         //创建File对象,用于存储拍照后的图片
-                        File outputImage = new File(Environment.getExternalStorageDirectory(),"output_image.jpg");
-                        try{
-                            if(outputImage.exists()){
+                        File outputImage = new File(Environment.getExternalStorageDirectory(), "output_image.jpg");
+                        try {
+                            if (outputImage.exists()) {
                                 outputImage.delete();
                             }
                             outputImage.createNewFile();
-                        }catch (IOException e){
+                        } catch (IOException e) {
                             e.printStackTrace();
                         }
                         imageUri = Uri.fromFile(outputImage);
                         Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                        intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
-                        startActivityForResult(intent,TAKE_PHOTO);//启动相机程序
+                        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                        startActivityForResult(intent, TAKE_PHOTO);//启动相机程序
                         break;
                     case 1:
-                        mode =false;
+                        mode = false;
                         Intent intent1 = new Intent("android.intent.action.GET_CONTENT");
                         intent1.setType("image/*");
-                        startActivityForResult(intent1,CHOOSE_PHOTO); //打开相册
+                        startActivityForResult(intent1, CHOOSE_PHOTO); //打开相册
                         break;
                 }
             }
@@ -124,18 +131,18 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
+        switch (requestCode) {
             case TAKE_PHOTO:
-                if(resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     Intent intent = new Intent("com.android.camera.action.CROP");
-                    intent.setDataAndType(imageUri,"image/*");
-                    intent.putExtra("scale",true);
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT,imageUri);
-                    startActivityForResult(intent,CROP_PHOTO); //启动裁剪程序
+                    intent.setDataAndType(imageUri, "image/*");
+                    intent.putExtra("scale", true);
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                    startActivityForResult(intent, CROP_PHOTO); //启动裁剪程序
                 }
                 break;
             case CROP_PHOTO:
-                if(resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     try {
                         bitmap = BitmapFactory.decodeStream
                                 (getContentResolver().openInputStream(imageUri));
@@ -146,64 +153,73 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
                 }
                 break;
             case CHOOSE_PHOTO:
-                if(resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     //判断手机系统版本号
-                    if(Build.VERSION.SDK_INT>=19){
+                    if (Build.VERSION.SDK_INT >= 19) {
                         //4.4及以上系统使用这个方法处理图片
                         handleImageOnKitKat(data);
-                    }else {
+                    } else {
                         //4.4以下系统使用这个方法处理图片
                         handleImageBeforeKitKat(data);
                     }
                 }
                 break;
         }
+        if (mode) {
+            getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putString("imageUri", String.valueOf(imageUri)).commit();
+
+        } else {
+            getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putString("imagePath", imagePath).commit();
+
+        }
+        getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putBoolean("mode", mode).commit();
+
     }
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private void handleImageOnKitKat(Intent data) {
         Uri uri = data.getData();
-        if(DocumentsContract.isDocumentUri(this,uri)){
+        if (DocumentsContract.isDocumentUri(this, uri)) {
             //如果是document类型的Uri,则通过document id处理
             String docId = DocumentsContract.getDocumentId(uri);
-            if("com.android.providers.media.documents".equals(uri.getAuthority())){
+            if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
                 String id = docId.split(":")[1]; //解析出数字格式的id
-                String selection = MediaStore.Images.Media._ID + "=" +id;
-                imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,selection);
-            }else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())){
+                String selection = MediaStore.Images.Media._ID + "=" + id;
+                imagePath = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+            } else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
                 Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docId));
-                imagePath = getImagePath(contentUri,null);
+                imagePath = getImagePath(contentUri, null);
             }
 
-        }else if ("content".equalsIgnoreCase(uri.getScheme())){
+        } else if ("content".equalsIgnoreCase(uri.getScheme())) {
             //如果不是document类型的Uri,则使用普通方式处理
-            imagePath = getImagePath(uri,null);
+            imagePath = getImagePath(uri, null);
         }
         displayImage(imagePath); //根据图片路径显示图片
     }
 
     private void displayImage(String imagePath) {
-        if(imagePath != null){
+        if (imagePath != null) {
             bitmap = BitmapFactory.decodeFile(imagePath);
             iv_avatar.setImageBitmap(bitmap);
-        }else{
-            Toast.makeText(this,"failed to get image",Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "failed to get image", Toast.LENGTH_SHORT).show();
         }
     }
 
 
     private void handleImageBeforeKitKat(Intent data) {
         Uri uri = data.getData();
-        imagePath = getImagePath(uri,null);
+        imagePath = getImagePath(uri, null);
         displayImage(imagePath);
     }
 
     private String getImagePath(Uri uri, String selection) {
         String path = null;
         //通过Uri和selection来获取真实的图片路径
-        Cursor cursor = getContentResolver().query(uri,null,selection,null,null);
-        if(cursor!=null){
-            if(cursor.moveToFirst()){
+        Cursor cursor = getContentResolver().query(uri, null, selection, null, null);
+        if (cursor != null) {
+            if (cursor.moveToFirst()) {
                 path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
             }
             cursor.close();
@@ -214,14 +230,6 @@ public class ProfileActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mode){
-            getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putString("imageUri", String.valueOf(imageUri)).commit();
-
-        }else{
-            getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putString("imagePath", imagePath).commit();
-
-        }
-        getSharedPreferences(Constant.USERINFO_FILENAME, MODE_PRIVATE).edit().putBoolean("mode", mode).commit();
 
     }
 

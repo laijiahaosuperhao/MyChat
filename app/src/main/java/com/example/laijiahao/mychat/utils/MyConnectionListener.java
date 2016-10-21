@@ -60,7 +60,7 @@ public class MyConnectionListener implements EMConnectionListener {
                 } else {
                     if (NetUtils.hasNetwork(context)) {
 //                        //连接不到聊天服务器
-//                        Toast.makeText(context, "连接不到聊天服务器", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "连接不到聊天服务器", Toast.LENGTH_SHORT).show();
                     } else {
                         //当前网络不可用，请检查网络设置
                         Toast.makeText(context, "当前网络不可用，请检查网络设置", Toast.LENGTH_SHORT).show();

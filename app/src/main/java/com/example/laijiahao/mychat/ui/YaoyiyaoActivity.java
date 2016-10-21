@@ -37,7 +37,7 @@ public class YaoyiyaoActivity extends BaseActivity {
     private SensorEventListener listener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
-           // 加速度可能是负值,所以要取它们的绝对值
+           // 加速度可能是负值,所以要取它们的绝对值,获取到x轴，y轴，z轴方向上的加速度值
             float xValue = Math.abs(event.values[0]);
             float yValue = Math.abs(event.values[1]);
             float zValue = Math.abs(event.values[2]);

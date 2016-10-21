@@ -53,7 +53,7 @@ public class SplashActivity extends BaseActivity {
                 Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
                 0.5f);
         animScale.setDuration(1000);
-        animScale.setFillAfter(true);
+        animScale.setFillAfter(true); //保持动画变化的状态
 
         // 渐变
         AlphaAnimation animAlpha = new AlphaAnimation(0, 1);
@@ -100,6 +100,7 @@ public class SplashActivity extends BaseActivity {
             }
         });
 
+        //压缩背景图
         initBackGround();
     }
 

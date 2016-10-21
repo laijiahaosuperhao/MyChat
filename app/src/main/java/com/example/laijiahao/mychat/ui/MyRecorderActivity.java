@@ -98,7 +98,7 @@ public class MyRecorderActivity extends BaseActivity implements View.OnClickList
                 anim.start();
                 if (mDatas.get(position).filePath != null) {
 
-                    //用MediaManager类来播放音频  参数二 回调接口,音频播放完成后,需要在结束的回调方法里面将animView的动画取消
+                //用MediaManager类来播放音频  参数二 回调接口,音频播放完成后,需要在结束的回调方法里面将animView的动画取消
                     MediaManager.playSound(mDatas.get(position).filePath, new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {

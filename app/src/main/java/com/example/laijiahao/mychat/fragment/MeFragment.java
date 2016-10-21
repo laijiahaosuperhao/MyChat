@@ -5,21 +5,24 @@ import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.laijiahao.mychat.R;
 import com.example.laijiahao.mychat.constant.Constant;
 import com.example.laijiahao.mychat.receiver.MyAdminDeviceReceiver;
-import com.example.laijiahao.mychat.ui.SettingActivity;
 import com.example.laijiahao.mychat.ui.CompassActivity;
 import com.example.laijiahao.mychat.ui.PreWalletActivity;
 import com.example.laijiahao.mychat.ui.ProfileActivity;
+import com.example.laijiahao.mychat.ui.SettingActivity;
 import com.example.laijiahao.mychat.utils.MyConnectionListener;
 import com.hyphenate.chat.EMClient;
 
@@ -33,6 +36,10 @@ public class MeFragment extends Fragment implements View.OnClickListener{
 	private RelativeLayout re_setting;
 	private TextView tv_name;
 	private TextView tv_id;
+	private Bitmap bitmap;
+	private String imagePathOK;
+	private ImageView iv_avatar;
+	private boolean isVisible = false;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,9 +50,12 @@ public class MeFragment extends Fragment implements View.OnClickListener{
 		zhinanzhen = (RelativeLayout) view.findViewById(R.id.zhinanzhen);
 		re_myinfo = (RelativeLayout) view.findViewById(R.id.re_myinfo);
 		re_wallet = (RelativeLayout) view.findViewById(R.id.re_wallet);
+		iv_avatar = (ImageView) view.findViewById(R.id.iv_avatar);
 		tv_id = (TextView) view.findViewById(R.id.tv_id);
 		tv_name = (TextView) view.findViewById(R.id.tv_name);
 		re_setting = (RelativeLayout) view.findViewById(R.id.re_setting);
+
+
 
 
 		String nick = getActivity().getSharedPreferences(Constant.USERINFO_FILENAME, Context.MODE_PRIVATE).getString("nick", "laijiahaosuperhao");
@@ -117,6 +127,16 @@ public class MeFragment extends Fragment implements View.OnClickListener{
 	}
 
 	private void initView() {
+	}
+
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		imagePathOK = getActivity().getSharedPreferences(Constant.USERINFO_FILENAME,
+				Context.MODE_PRIVATE).getString("imagePath", "");
+		bitmap = BitmapFactory.decodeFile(imagePathOK);
+		iv_avatar.setImageBitmap(bitmap);
 	}
 
 }

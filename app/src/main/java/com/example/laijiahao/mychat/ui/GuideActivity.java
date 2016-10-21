@@ -81,7 +81,7 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
             if (i > 0) {
-                params.leftMargin = 8;// 从第二个点开始设置边距
+                params.leftMargin = 12;// 从第二个点开始设置边距
             }
 
             pointView.setLayoutParams(params);

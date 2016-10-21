@@ -70,9 +70,8 @@ public class LoginActivity extends BaseActivity {
         et_usertel.addTextChangedListener(new TextWatcher() {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-             //   mFireworkView_et_password.setEnabled(false);
-             //   et_password.setText(null);
-
+                if (!TextUtils.isEmpty(et_password.getText().toString()))
+                et_password.setText("");
             }
 
             @Override

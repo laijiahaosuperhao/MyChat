@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,7 @@ import android.widget.TextView;
 
 import com.example.laijiahao.mychat.R;
 import com.example.laijiahao.mychat.ui.WalletActivity;
-import com.example.laijiahao.mychat.utils.LockPatternView;
+import com.example.laijiahao.mychat.widget.LockPatternView;
 
 
 /**
@@ -33,6 +32,8 @@ public class PasswordFragment extends Fragment implements LockPatternView.OnPatt
     private String passwordStr;
     private Button btn;
     private int errornum = 0;
+    private SharedPreferences sp;
+    private SharedPreferences.Editor editor;
 
     public static PasswordFragment newInstance(String typeStr) {
         PasswordFragment fragment = new PasswordFragment();
@@ -78,7 +79,8 @@ public class PasswordFragment extends Fragment implements LockPatternView.OnPatt
             //密码检查
             if (getArguments() != null) {
                 if (TYPE_CHECK.equals(getArguments().getString(ARG_TYPE))) {
-                    SharedPreferences sp = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
+                    sp = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
+                    editor = sp.edit();
                     //检查成功
                     if (passwordStr.equals(sp.getString("password", ""))) {
                         getActivity().startActivity(new Intent(getActivity(), WalletActivity.class));
@@ -89,6 +91,7 @@ public class PasswordFragment extends Fragment implements LockPatternView.OnPatt
                         errornum++;
                         lockPatternView.resetPoint();
                         if (errornum == 3) {
+                            editor.clear().commit();
                             Intent intent = new Intent("com.example.broadcastbestpractice.FORCE_OFFLINE");
                             getActivity().sendBroadcast(intent);
                         }
@@ -112,8 +115,6 @@ public class PasswordFragment extends Fragment implements LockPatternView.OnPatt
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fragment_password_btn_commit:
-                Log.d("99999", "sdddd");
-
                 SharedPreferences sp = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE);
                 sp.edit().putString("password", passwordStr).commit();
                 getActivity().finish();

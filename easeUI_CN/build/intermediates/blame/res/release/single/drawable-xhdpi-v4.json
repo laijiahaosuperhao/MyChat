@@ -16,12 +16,12 @@
         "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_edit_normal.9.png"
     },
     {
-        "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/release/drawable-xhdpi-v4/ease_chat_takepic_normal.png",
-        "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_takepic_normal.png"
-    },
-    {
         "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/release/drawable-xhdpi-v4/ease_delete_expression.png",
         "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/drawable-xhdpi/ease_delete_expression.png"
+    },
+    {
+        "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/release/drawable-xhdpi-v4/ease_chat_takepic_normal.png",
+        "source": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/src/main/res/drawable-xhdpi/ease_chat_takepic_normal.png"
     },
     {
         "merged": "/Users/laijiahao/AndroidStudioProjects/MyChat/easeUI_CN/build/intermediates/res/merged/release/drawable-xhdpi-v4/ease_chat_location_normal.png",

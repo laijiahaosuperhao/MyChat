@@ -8,7 +8,9 @@ import com.example.laijiahao.mychat.db.UserDao;
 import com.example.laijiahao.mychat.domain.InviteMessage;
 import com.hyphenate.EMContactListener;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.easeui.controller.EaseUI;
 import com.hyphenate.easeui.domain.EaseUser;
+import com.hyphenate.easeui.model.EaseNotifier;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -30,6 +32,7 @@ public class DemoHelper {
     private UserDao userDao;
 
     private boolean isContactListenerRegisted;
+    private EaseUI easeUI;
 
 
     public synchronized static DemoHelper getInstance() {
@@ -203,6 +206,18 @@ public class DemoHelper {
         inviteMessgeDao.saveMessage(msg);
         //increase the unread message count
         inviteMessgeDao.saveUnreadMessageCount(1);
+        // notify there is new message
+        getNotifier().vibrateAndPlayTone(null);
+    //    getNotifier().vibrateAndPlayTone(EMMessage.createReceiveMessage(EMMessage.Type.CMD));
+    }
+
+    /**
+     * get instance of EaseNotifier
+     *
+     * @return
+     */
+    public EaseNotifier getNotifier() {
+        return easeUI.getNotifier();
     }
 
 
