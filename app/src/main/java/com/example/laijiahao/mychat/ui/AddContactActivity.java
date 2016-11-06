@@ -86,7 +86,8 @@ public class AddContactActivity extends BaseActivity{
      */
     public void addContact(View view){
         //不能添加自己
-        if(EMClient.getInstance().getCurrentUser().equals(nameText.getText().toString())){
+        if(EMClient.getInstance().getCurrentUser()
+                .equals(nameText.getText().toString())){
             new EaseAlertDialog(this, R.string.not_add_myself).show();
             return;
         }

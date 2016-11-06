@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.example.laijiahao.mychat.R;
+import com.example.laijiahao.mychat.ui.BaiduMapActivity;
 import com.example.laijiahao.mychat.ui.ChooseAreaActivity;
 import com.example.laijiahao.mychat.ui.FriendCircleActivity;
 import com.example.laijiahao.mychat.ui.YaoyiyaoActivity;
@@ -19,6 +20,7 @@ public class FindFragment extends Fragment implements View.OnClickListener{
 	private RelativeLayout saoyisao;
 	private RelativeLayout re_friends;
 	private RelativeLayout myweather;
+	private RelativeLayout re_fujin;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,10 +30,12 @@ public class FindFragment extends Fragment implements View.OnClickListener{
 		saoyisao = (RelativeLayout) view.findViewById(R.id.re_qrcode);
 		re_friends = (RelativeLayout) view.findViewById(R.id.re_friends);
 		myweather = (RelativeLayout) view.findViewById(R.id.myweather);
+		re_fujin = (RelativeLayout) view.findViewById(R.id.re_fujin);
 		yaoyiyao.setOnClickListener(this);
 		saoyisao.setOnClickListener(this);
 		re_friends.setOnClickListener(this);
 		myweather.setOnClickListener(this);
+		re_fujin.setOnClickListener(this);
 		return view;
 	}
 
@@ -54,6 +58,10 @@ public class FindFragment extends Fragment implements View.OnClickListener{
 			case R.id.myweather:
 				Intent myWeather = new Intent(getActivity(),ChooseAreaActivity.class);
 				startActivity(myWeather);
+				break;
+			case R.id.re_fujin:
+				Intent mySite = new Intent(getActivity(),BaiduMapActivity.class);
+				startActivity(mySite);
 				break;
 
 		}

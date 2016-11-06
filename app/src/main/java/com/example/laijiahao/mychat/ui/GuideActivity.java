@@ -44,7 +44,8 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
     private int mPointWidth;// 两个圆点的宽度
 
     private BitmapDrawable initBackGround(int resourceId) {
-        Bitmap bitMap = ImageUtils.decodeSampledBitmapFromResource(getResources(), resourceId, 200, 200);
+        Bitmap bitMap = ImageUtils.decodeSampledBitmapFromResource(getResources()
+                , resourceId, 200, 200);
         BitmapDrawable bd = new BitmapDrawable(getResources(), bitMap);
         return bd;
     }
@@ -56,7 +57,8 @@ public class GuideActivity extends BaseActivity implements View.OnClickListener 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_guide);
         mImageIds = new BitmapDrawable[] {initBackGround(R.drawable.guide_1),
-                initBackGround(R.drawable.guide_2), initBackGround(R.drawable.guide_3) ,initBackGround(R.drawable.guide_4)};
+                initBackGround(R.drawable.guide_2), initBackGround(R.drawable.guide_3)
+                ,initBackGround(R.drawable.guide_4)};
 
 
         mViewPager = (ViewPager) findViewById(R.id.vp_pager);

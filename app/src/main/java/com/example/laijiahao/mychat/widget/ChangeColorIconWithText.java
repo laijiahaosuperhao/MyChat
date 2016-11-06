@@ -76,17 +76,17 @@ public class ChangeColorIconWithText extends View
 			int attr = a.getIndex(i);
 			switch (attr)
 			{
-				case R.styleable.ChangeColorIconWithText_icon1:
+				case R.styleable.ChangeColorIconWithText_icon:
 					BitmapDrawable drawable = (BitmapDrawable) a.getDrawable(attr);
 					mIconBitmap = drawable.getBitmap();
 					break;
-				case R.styleable.ChangeColorIconWithText_color1:
+				case R.styleable.ChangeColorIconWithText_color:
 					mColor = a.getColor(attr, 0xFF45C01A);
 					break;
-				case R.styleable.ChangeColorIconWithText_text1:
+				case R.styleable.ChangeColorIconWithText_text:
 					mText = a.getString(attr);
 					break;
-				case R.styleable.ChangeColorIconWithText_text_size1:
+				case R.styleable.ChangeColorIconWithText_text_size:
 					mTextSize = (int) a.getDimension(attr, TypedValue
 							.applyDimension(TypedValue.COMPLEX_UNIT_SP, 12,
 									getResources().getDisplayMetrics()));
@@ -151,7 +151,6 @@ public class ChangeColorIconWithText extends View
 		drawTargetText(canvas, alpha);
 		//把内存中的Bitmap绘制出来,即把交集绘制出来,覆盖在原图的上面
 		canvas.drawBitmap(mBitmap, 0, 0, null);
-
 	}
 
 	/**

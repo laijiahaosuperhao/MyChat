@@ -1,5 +1,6 @@
 package com.example.laijiahao.mychat.ui;
 
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
@@ -24,6 +25,7 @@ import java.util.List;
 public class FriendCircleActivity extends BaseActivity {
     private ListView listView;
     private List<List<Image>> imagesList;
+    private ImageView iv_music;
     private ImageView iv_camera;
     private MediaPlayer mediaPlayer ;
     private RefreshableView refreshableView;
@@ -52,6 +54,7 @@ public class FriendCircleActivity extends BaseActivity {
          */
         refreshableView = (RefreshableView) findViewById(R.id.refreshable_view);
 
+        iv_music = (ImageView) findViewById(R.id.iv_music);
         iv_camera = (ImageView) findViewById(R.id.iv_camera);
         listView = (ListView) findViewById(R.id.lv_main);
         imagesList = new ArrayList<>();
@@ -69,7 +72,7 @@ public class FriendCircleActivity extends BaseActivity {
         mediaPlayer = new MediaPlayer();
         /**初始化MediaPlayer对象*/
         initMediaPlayer();
-        iv_camera.setOnClickListener(new View.OnClickListener() {
+        iv_music.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!mediaPlayer.isPlaying()){
@@ -77,6 +80,13 @@ public class FriendCircleActivity extends BaseActivity {
                 }else if(mediaPlayer.isPlaying()){
                     mediaPlayer.pause(); //暂停播放
                 }
+            }
+        });
+        iv_camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FriendCircleActivity.this,ImageloaderActivity.class);
+                startActivity(intent);
             }
         });
 

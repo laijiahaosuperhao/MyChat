@@ -155,20 +155,24 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
         FindFragment findFragment = new FindFragment();
         MeFragment meFragment = new MeFragment();
 
-        contactFragment.setContactListItemClickListener(new EaseContactListFragment.EaseContactListItemClickListener() {
+        contactFragment.setContactListItemClickListener(new EaseContactListFragment
+                .EaseContactListItemClickListener() {
 
             @Override
             public void onListItemClicked(EaseUser user) {
-                startActivity(new Intent(MainActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID, user.getUsername()));
+                startActivity(new Intent(MainActivity.this, ChatActivity.class)
+                        .putExtra(EaseConstant.EXTRA_USER_ID, user.getUsername()));
             }
         });
 
-        conversationListFragment.setConversationListItemClickListener(new EaseConversationListFragment.EaseConversationListItemClickListener() {
+        conversationListFragment.setConversationListItemClickListener
+                (new EaseConversationListFragment.EaseConversationListItemClickListener() {
 
             @Override
             public void onListItemClicked(EMConversation conversation) {
                 //进入聊天页面
-                startActivity(new Intent(MainActivity.this, ChatActivity.class).putExtra(EaseConstant.EXTRA_USER_ID, conversation.getUserName()));
+                startActivity(new Intent(MainActivity.this, ChatActivity.class)
+                        .putExtra(EaseConstant.EXTRA_USER_ID, conversation.getUserName()));
             }
         });
 

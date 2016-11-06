@@ -47,13 +47,26 @@
                     android:textSize="18sp" />
 
                 <ImageView
+                    android:id="@+id/iv_music"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:src="@drawable/music"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/iv_camera"
+                    android:layout_toStartOf="@+id/iv_camera"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
                     android:id="@+id/iv_camera"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:src="@drawable/icon_camera_moments"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="3dp"
-                    android:padding="13dp"
-                    android:src="@drawable/icon_camera_moments" />
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentEnd="true" />
         </RelativeLayout>
 
         <com.example.laijiahao.mychat.widget.RefreshableView

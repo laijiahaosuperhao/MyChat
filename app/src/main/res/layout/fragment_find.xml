@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="#EBEBEB"
     android:orientation="vertical" >
+
     <RelativeLayout
         android:id="@+id/myweather"
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="12dp"
-            android:src="@drawable/ease_chat_location_normal" />
+            android:src="@drawable/ease_chat_image_normal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -138,31 +139,36 @@
         android:clickable="true"
         android:paddingLeft="12dp" >
 
-        <ImageView
-            android:id="@+id/iv_fujin"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:src="@drawable/find_fujin" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/iv_fujin"
-            android:text="附近的人"
-            android:textColor="#353535"
-            android:textSize="16sp" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="12dp"
             android:background="#dadada" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="我的位置"
+            android:textColor="#353535"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_fujin"
+            android:layout_toEndOf="@+id/iv_fujin"
+            android:layout_marginStart="20dp"
+            android:id="@+id/textView3" />
+
+        <ImageView
+            android:id="@+id/iv_fujin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ease_chat_location_normal"
+            android:layout_marginStart="12dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
 
     <RelativeLayout

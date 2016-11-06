@@ -156,7 +156,8 @@ public class DemoHelper {
             List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
 
             for (InviteMessage inviteMessage : msgs) {
-                if (inviteMessage.getGroupId() == null && inviteMessage.getFrom().equals(username)) {
+                if (inviteMessage.getGroupId() == null && inviteMessage
+                        .getFrom().equals(username)) {
                     inviteMessgeDao.deleteMessage(username);
                 }
             }
@@ -208,7 +209,8 @@ public class DemoHelper {
         inviteMessgeDao.saveUnreadMessageCount(1);
         // notify there is new message
         getNotifier().vibrateAndPlayTone(null);
-    //    getNotifier().vibrateAndPlayTone(EMMessage.createReceiveMessage(EMMessage.Type.CMD));
+    //    getNotifier().vibrateAndPlayTone(EMMessage
+        // .createReceiveMessage(EMMessage.Type.CMD));
     }
 
     /**

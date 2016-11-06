@@ -25,10 +25,10 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            laijiahao:icon1="@drawable/ic_menu_start_conversation"
-            laijiahao:text1="@string/app_name"
-            laijiahao:text_size1="12sp"
-            laijiahao:color1="#ff45c01a" />
+            laijiahao:icon="@drawable/ic_menu_start_conversation"
+            laijiahao:text="@string/app_name"
+            laijiahao:text_size="12sp"
+            laijiahao:color="#ff45c01a" />
 
         <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_two"
@@ -36,10 +36,10 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            laijiahao:icon1="@drawable/ic_menu_friendslist"
-            laijiahao:text1="@string/tab_contact"
-            laijiahao:text_size1="12sp"
-            laijiahao:color1="#ff45c01a" />
+            laijiahao:icon="@drawable/ic_menu_friendslist"
+            laijiahao:text="@string/tab_contact"
+            laijiahao:text_size="12sp"
+            laijiahao:color="#ff45c01a" />
 
         <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_three"
@@ -47,10 +47,10 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            laijiahao:icon1="@drawable/ic_menu_emoticons"
-            laijiahao:text1="@string/tab_found"
-            laijiahao:text_size1="12sp"
-            laijiahao:color1="#ff45c01a" />
+            laijiahao:icon="@drawable/ic_menu_emoticons"
+            laijiahao:text="@string/tab_found"
+            laijiahao:text_size="12sp"
+            laijiahao:color="#ff45c01a" />
 
         <com.example.laijiahao.mychat.widget.ChangeColorIconWithText
             android:id="@+id/id_indicator_four"
@@ -58,10 +58,10 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:padding="5dp"
-            laijiahao:icon1="@drawable/ic_menu_allfriends"
-            laijiahao:text1="@string/tab_me"
-            laijiahao:text_size1="12sp"
-            laijiahao:color1="#ff45c01a" />
+            laijiahao:icon="@drawable/ic_menu_allfriends"
+            laijiahao:text="@string/tab_me"
+            laijiahao:text_size="12sp"
+            laijiahao:color="#ff45c01a" />
     </LinearLayout>
 
 </LinearLayout>

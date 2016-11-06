@@ -105,7 +105,8 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void initBackGround() {
-        Bitmap bitMap = ImageUtils.decodeSampledBitmapFromResource(getResources(), R.drawable.fx_bg_welcome, 200, 200);
+        Bitmap bitMap = ImageUtils.decodeSampledBitmapFromResource(getResources(),
+                R.drawable.fx_bg_welcome, 200, 200);
         BitmapDrawable bd = new BitmapDrawable(getResources(), bitMap);
         rlRoot.setBackground(bd);
     }
@@ -128,9 +129,10 @@ public class SplashActivity extends BaseActivity {
         new Thread(new Runnable() {
             public void run() {
                 if (DemoHelper.getInstance().isLoggedIn()) {
-                    // auto login mode, make sure all group and conversation is loaed before enter the main screen
+                    // auto login mode, make sure all group and conversation is loaed
+                    // before enter the main screen
                     long start = System.currentTimeMillis();
-                    EMClient.getInstance().groupManager().loadAllGroups();
+                //    EMClient.getInstance().groupManager().loadAllGroups();
                     EMClient.getInstance().chatManager().loadAllConversations();
                     long costTime = System.currentTimeMillis() - start;
                     //wait
